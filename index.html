@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- css from https://github.com/ai-workshops/ai-workshops.github.io/blob/master/generalizable-policy-learning-in-the-physical-world/style.css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<link rel="icon" href="imgs/icon.jpg" type="image/jpeg">
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+  integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <title>CoRL25 - Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects Workshop</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair%20Display%3A400%2C700%2C900%7COpen%20Sans%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic&amp;display=swap" rel="stylesheet" nonce="">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: solid;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 5px 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    .triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid rgb(255, 255, 255);
+      float: right;
+    }
+
+    .triangle-down {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid rgb(255, 255, 255);
+      float: right;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-xl navbar-expand-lg navbar-expand-custom navbar-fixed-top sticky-nav">
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#call">Call for Papers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#speaker">Speakers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#schedule">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#organizers">Organizers</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="title-container">
+    <div style="text-align: center;">
+      <!-- <div class="subtitle" style="margin-bottom: 20px;"><a href="https://2025.ieee-icra.org/" target="_blank"><img src="imgs/ICRA-RGB.png" style="width:250px;"></a></div> -->
+      <h1 style="width:60%;margin:auto;">Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects Workshop</h1>
+      <div class="subtitle" style="margin: 20px; margin-bottom: -10px;">
+        CoRL 2025 | Seoul, Korea | September 27, 2025<br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom: 0px;">
+    <div class="section" id="overview" style="align-content:center;">
+      <!-- <img src="imgs/logo.png" class="mx-auto d-block" style="width:500px;"> -->
+      <h2>Overview</h2>
+      <p>The physical world is inherently deformable and dynamic. However, many of the modern robotic modeling and perception stacks operate under assumptions of rigid, static environments, limiting their robustness and generality in the real world. Deformable objects such as ropes, cloth, plants, and soft containers are common in daily life, and environments themselves—ranging from sand and fluids to flexible structures and dynamic scenes—exhibit non-rigid, history-dependent behavior that challenges traditional robotic pipelines.</p>
+
+      <p>This workshop aims to bring together researchers working across robotics, computer vision, and machine learning to address the challenges of perception, representation, and interaction in deformable worlds. Core questions include:</p>
+      <ul>
+          <li>How should we represent and reconstruct deformable objects in 3D?</li>
+          <li>How can learned models reason about dynamic changes in shape and topology?</li>
+          <li>What role can physics-based models and differentiable simulators play in generalizing prediction and control?</li>
+          <li>And how do we design active perception strategies that account for the uncertainty and shifting nature of deformable environments?</li>
+      </ul>
+  
+      <p>Now is a critical time for this workshop. Recent advances in foundation models, 3D Gaussian splatting, differentiable physics, and graph-based representations provide unprecedented tools to address long-standing challenges in deformable world modeling. At the same time, real-world robotics applications—from household manipulation to surgical automation—demand robust systems that can sense, reason, and act in the presence of soft, complex, and dynamic materials.</p>
+  
+      <p>This workshop will provide a forum to discuss shared challenges, emerging solutions, and opportunities for collaboration across domains. We welcome contributions from robotics, 3D vision, physics simulation, material modeling, and learning communities interested in deformable and dynamic interaction.</p>
+    </div>
+
+  
+
+
+    <!-- <div class="section" id="speakers" style="text-align: center; padding: 0px; padding-bottom: -20px;">
+      <h2>Invited Speakers</h2>
+      <br>
+      <div class="grid profiles">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://people.csail.mit.edu/ganchuang/" target="_blank"><img src="imgs/speakers/chuang_gan.jpg"
+                class="rounded-circle" alt="Chuang Gan" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://people.csail.mit.edu/ganchuang/" target="_blank">Chuang Gan</a></h5>
+            UMass Amherst | MIT-IBM
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://locomotion.csail.mit.edu/russt.html" target="_blank"><img
+                src="imgs/speakers/russ_tedrake.jpg" class="rounded-circle" alt="Russ Tedrake" width="140"
+                height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://locomotion.csail.mit.edu/russt.html" target="_blank">Russ Tedrake</a></h5>
+            Massachusetts Institute of Technology
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://www.cs.cmu.edu/~katef/" target="_blank"><img src="imgs/speakers/katarina_fragkiadaki.jpg"
+                class="rounded-circle" alt="Katerina Fragkiadaki" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://www.cs.cmu.edu/~katef/" target="_blank">Katerina Fragkiadaki</a></h5>
+            Carnegie Mellon University
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://europe.naverlabs.com/people_user_naverlabs/j%c3%a9rome-revaud/" target="_blank"><img
+                src="imgs/speakers/jerome_revaud.jpg" class="rounded-circle" alt="Jerome Revaud" width="140"
+                height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://europe.naverlabs.com/people_user_naverlabs/j%c3%a9rome-revaud/" target="_blank">Jerome Revaud</a></h5>
+            Naver Labs
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://research.nvidia.com/person/jonathan-tremblay" target="_blank"><img
+                src="imgs/speakers/jonathan_tremblay.jpg" class="rounded-circle" alt="Jonathan Tremblay" width="140"
+                height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://research.nvidia.com/person/jonathan-tremblay" target="_blank">Jonathan Tremblay</a></h5>
+            NVIDIA
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://yunzhuli.github.io/" target="_blank"><img src="imgs/organizers/yunzhu_li.jpg"
+                class="rounded-circle" alt="Yunzhu Li" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://yunzhuli.github.io/" target="_blank">Yunzhu Li</a></h5>
+            Columbia University
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="section" id="schedule" style="align-content:center;">
+      <h2>Event Schedule</h2>
+      <table class="calculator table-borderless" style="text-align:center; margin: 0 auto;">
+        <tr>
+          <td class="noborder">8:00 - 8:15</td>
+          <td class="noborder"><b>Opening Remarks</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">8:15 - 8:30</td>
+          <td class="noborder"><b>Poster Teasers</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">8:30 - 8:55</td>
+          <td class="noborder"><b>Speaker 1</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">8:55 - 9:20</td>
+          <td class="noborder"><b>Speaker 2</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">9:20 - 9:45</td>
+          <td class="noborder"><b>Speaker 3</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">9:45 - 10:10</td>
+          <td class="noborder"><b>Speaker 4</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">10:10 - 10:50</td>
+          <td class="noborder"><b>Coffee Break &amp; Poster Sessions</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">10:50 - 11:15</td>
+          <td class="noborder"><b>Speaker 5</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">11:15 - 11:40</td>
+          <td class="noborder"><b>Speaker 6</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">11:40 - 11:45</td>
+          <td class="noborder"><b>Short Break</b></td>
+        </tr>
+        <tr>
+          <td class="noborder">11:45 - 12:30</td>
+          <td class="noborder"><b>Panel Discussion &amp; Debate</b></td>
+        </tr>
+      </table>
+      <br><br><br><br>
+    </div>
+
+    <div class="section" id="organizers" style="text-align: center; padding: 10px;">
+      <h2>Organizers</h2>
+      <br>
+      <div class="grid profiles">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://hollydinkel.github.io/" target="_blank"><img src="imgs/organizers/holly_dinkel.gif"
+                class="rounded-circle" alt="Holly Dinkel" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://hollydinkel.github.io/" target="_blank">Holly Dinkel</a></h5>
+            University of Illinois
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://buesma.github.io/" target="_blank"><img src="imgs/organizers/marcel_buesma.webp"
+                class="rounded-circle" alt="Marcel Büsching" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://buesma.github.io/" target="_blank">Marcel Büsching</a></h5>
+            KTH Royal Institute of Technology 
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://albilo17.github.io/" target="_blank"><img src="imgs/organizers/alberta_longhini.png"
+                class="rounded-circle" alt="Alberta Longhini" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://albilo17.github.io/" target="_blank">Alberta Longhini</a>
+            </h5>
+            KTH Royal Institute of Technology
+          </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://jenslundell.ai/" target="_blank"><img src="imgs/organizers/jens_lundell.jpg"
+                class="rounded-circle" alt="Jens Lundell" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://jenslundell.ai/" target="_blank">Jens Lundell</a>
+            </h5>
+            KTH Royal Institute of Technology
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://kywind.github.io/" target="_blank"><img src="imgs/organizers/kaifeng_zhang.jpeg"
+                class="rounded-circle" alt="Kaifeng Zhang" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://kywind.github.io/" target="_blank">Kaifeng Zhang</a></h5>
+            Columbia University
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://mingrui-yu.github.io/" target="_blank"><img src="imgs/organizers/mingrui_yu.jpg"
+                class="rounded-circle" alt="Mingrui YU" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://mingrui-yu.github.io/" target="_blank">Mingrui YU</a></h5>
+            Tsinghua University
+          </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://priyasundaresan.github.io/" target="_blank"><img src="imgs/organizers/mingrui_yu.jpg"
+                class="rounded-circle" alt="Priya Sundaresan" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://priyasundaresan.github.io/" target="_blank">Priya Sundaresan</a></h5>
+            Stanford University
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href=https://www.unibo.it/sitoweb/alessio.caporali/cv-en" target="_blank"><img src="imgs/organizers/alessio.png"
+                class="rounded-circle" alt="Alessio Caporali" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://www.unibo.it/sitoweb/alessio.caporali/cv-en" target="_blank">Alessio Caporali</a></h5>
+            University of Bologna
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://jadchakra.github.io/" target="_blank"><img src="imgs/organizers/jad_abouchakra.jpg"
+                class="rounded-circle" alt="Jad Abou-Chakra" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://jadchakra.github.io/" target="_blank">Jad Abou-Chakra</a>
+              </h5>
+              Queensland University of Technology
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+            <a href="https://www.bart-ai.com/" target="_blank"><img src="imgs/organizers/bardienus_duisterhof.png"
+                class="rounded-circle" alt="Bardienus Pieter Duisterhof" width="140" height="140"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://www.bart-ai.com/" target="_blank">Bardienus Pieter
+                Duisterhof</a></h5>
+            Carnegie Mellon University
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">
+    Website template from <a href="https://leap-workshop.github.io/">LEAP Workshop</a>.
+  </div>
+
+  </div>
+
+</body>
+
+</html>
