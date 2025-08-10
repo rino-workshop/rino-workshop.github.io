@@ -22,7 +22,9 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <title>CoRL25 - Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects Workshop</title>
-  <link href="https://fonts.googleapis.com/css?family=Playfair%20Display%3A400%2C700%2C900%7COpen%20Sans%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic&amp;display=swap" rel="stylesheet" nonce="">
+  <link
+    href="https://fonts.googleapis.com/css?family=Playfair%20Display%3A400%2C700%2C900%7COpen%20Sans%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic&amp;display=swap"
+    rel="stylesheet" nonce="">
   <link rel="stylesheet" href="css/style.css">
 
   <style>
@@ -100,10 +102,12 @@
   <div class="title-container">
     <div style="text-align: center;">
       <!-- <div class="subtitle" style="margin-bottom: 20px;"><a href="https://2025.ieee-icra.org/" target="_blank"><img src="imgs/ICRA-RGB.png" style="width:250px;"></a></div> -->
-     
-      
-      <a href="https://www.corl.org/home" target="_blank"><img src="imgs/assets/corl25.png" alt="Logo" class="img-fluid mx-auto d-block" style="max-width:300px; margin-bottom: 1em; margin-top: 1em;" /></a>
-      <h1 style="width:60%;margin:auto;">Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects Workshop</h1>
+
+
+      <a href="https://www.corl.org/home" target="_blank"><img src="imgs/assets/corl25.png" alt="Logo"
+          class="img-fluid mx-auto d-block" style="max-width:300px; margin-bottom: 1em; margin-top: 1em;" /></a>
+      <h1 style="width:60%;margin:auto;">Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects
+        Workshop</h1>
       <div class="subtitle" style="margin: 20px; margin-bottom: -10px;">
         Seoul, Korea | September 27, 2025<br>
       </div>
@@ -114,219 +118,344 @@
     <div class="section" id="overview" style="align-content:center;">
       <!-- <img src="imgs/logo.png" class="mx-auto d-block" style="width:500px;"> -->
       <h2>Overview</h2>
-      <p>The physical world is inherently non-rigid and dynamic. However, many modern robotic modeling and perception stacks assume rigid and static environments, limiting their robustness and generality in the real world. Non-rigid objects such as ropes, cloth, plants, and soft containers are common in daily life, and many environments, including sand, fluids, flexible structures, and dynamic scenes, exhibit deformability and history-dependency that challenges traditional assumptions in robotics.</p>
+      <p>The physical world is inherently non-rigid and dynamic. However, many modern robotic modeling and perception
+        stacks assume rigid and static environments, limiting their robustness and generality in the real world.
+        Non-rigid objects such as ropes, cloth, plants, and soft containers are common in daily life, and many
+        environments, including sand, fluids, flexible structures, and dynamic scenes, exhibit deformability and
+        history-dependency that challenges traditional assumptions in robotics.</p>
 
-      <p>This workshop comes at a pivotal moment: advances in foundation models, scalable data collection, differentiable physics, and 3D modeling and reconstruction create new opportunities to represent and interact in non-rigid, dynamic worlds. At the same time, real-world applications increasingly demand systems for handling soft, articulated, or granular dynamic objects. The workshop will convene researchers from robotics, computer vision, and machine learning to tackle shared challenges in perception, representation, and interaction in non-rigid worlds. By surfacing emerging solutions and promoting cross-disciplinary collaboration, the workshop aims to advance the development of more generalizable models grounded in data and physics for real-world robotic interaction.</p>
+      <p>This workshop comes at a pivotal moment: advances in foundation models, scalable data collection,
+        differentiable physics, and 3D modeling and reconstruction create new opportunities to represent and interact in
+        non-rigid, dynamic worlds. At the same time, real-world applications increasingly demand systems for handling
+        soft, articulated, or granular dynamic objects. The workshop will convene researchers from robotics, computer
+        vision, and machine learning to tackle shared challenges in perception, representation, and interaction in
+        non-rigid worlds. By surfacing emerging solutions and promoting cross-disciplinary collaboration, the workshop
+        aims to advance the development of more generalizable models grounded in data and physics for real-world robotic
+        interaction.</p>
 
 
-    <div class="section" style="align-content:center;">
-      <!-- <img src="imgs/logo.png" class="mx-auto d-block" style="width:500px;"> -->
-      <h2>Discussion Topics</h2>
-      <ul>
-        <li>How might we learn to robustly perceive, reconstruct, and represent non-rigid objects in 3D, particularly from sparse or noisy sensor data?</li>
-        <li>How might simulation tools, foundation models, and scene-specific reconstruction methods (e.g., 3D Gaussian splatting) be used to represent non-rigid, dynamic worlds?</li>
-        <li>How might we actively, interactively, or adaptively perceive the world to reveal highly-uncertain, history-dependent object or environment properties?</li>
-        <li>How might we achieve reliable robot manipulation and interaction in complex, real-world scenarios involving non-rigid objects with varying topology, material properties, and appearance?</li>
-        <li>How might we design representation and perception strategies to handle complex object appearance or material properties such as translucency (e.g., glass), high reflectance (e.g., metal), or particulate behavior (e.g., sand)?</li>
-    </ul>
-    </div>
+      <div class="section" style="align-content:center;">
+        <!-- <img src="imgs/logo.png" class="mx-auto d-block" style="width:500px;"> -->
+        <h2>Discussion Topics</h2>
+        <ul>
+          <li>How might we learn to robustly perceive, reconstruct, and represent non-rigid objects in 3D, particularly
+            from sparse or noisy sensor data?</li>
+          <li>How might simulation tools, foundation models, and scene-specific reconstruction methods (e.g., 3D
+            Gaussian splatting) be used to represent non-rigid, dynamic worlds?</li>
+          <li>How might we actively, interactively, or adaptively perceive the world to reveal highly-uncertain,
+            history-dependent object or environment properties?</li>
+          <li>How might we achieve reliable robot manipulation and interaction in complex, real-world scenarios
+            involving non-rigid objects with varying topology, material properties, and appearance?</li>
+          <li>How might we design representation and perception strategies to handle complex object appearance or
+            material properties such as translucency (e.g., glass), high reflectance (e.g., metal), or particulate
+            behavior (e.g., sand)?</li>
+        </ul>
+      </div>
 
-    <div class="papers" id="papers" style="align-content:center;">
-      <h2>Call For Papers</h2>
-      <p>
-        We invite extended abstracts of up to 5 pages (excluding references, acknowledgments, limitations, and appendix) formatted in the <a href="https://drive.google.com/file/d/1XalwYG542cg2YAHo8STgZKxhAIA8_HSu/view?usp=sharing"><b>CoRL template</b></a> and submitted via the <a href="https://openreview.net/group?id=robot-learning.org/CoRL/2025/Workshop/RINO"><b>RINO OpenReview console</b></a>.
-        <br><br>
-        Submissions will be reviewed in a double-blind process by workshop organizers and attendees.
-        <b>Each submission must nominate one reviewer to evaluate one other contribution</b>, following the CoRL main track's reciprocal review model.
-        Accepted abstracts will be published on the workshop website and presented as posters.  Selected works will be invited for spotlight presentations.
-        <br><br>
-        We encourage submission of in-progress work and extensions of previously published material; originality is welcome but not required.
-        However, <b>workshop paper versions of papers accepted to the CoRL 2025 main track are not permitted</b>. We strongly encourage in-person participation of at least one author in the workshop.
-        The timezone for all deadlines is <a href="https://time.is/Anywhere_on_Earth"><b>Anywhere on Earth (AoE)</b></a>.
-      </p>
-      <table class="calculator table-borderless" style="text-align:center; margin: 0 auto;">
-        <tr>
-          <td class="noborder">Paper Submission Opens</td>
-          <td class="noborder"><b>Aug 1 </b></td>
-        </tr>
-        <tr>
-          <td class="noborder">Paper Submission Deadline</td>
-          <td class="noborder"><b>Aug 21</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">Review Period</td>
-          <td class="noborder"><b>Aug 25 - Sep 5</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">Author Notification</td>
-          <td class="noborder"><b>Sep 8</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">Camera-ready Deadline</td>
-          <td class="noborder"><b>Sep 17</b></td>
-        </tr>
-      </table>
+      <div class="papers" id="papers" style="align-content:center;">
+        <h2>Call For Papers</h2>
+        <p>
+          We invite extended abstracts of up to 5 pages (excluding references, acknowledgments, limitations, and
+          appendix) formatted in the <a
+            href="https://drive.google.com/file/d/1XalwYG542cg2YAHo8STgZKxhAIA8_HSu/view?usp=sharing"><b>CoRL
+              template</b></a> and submitted via the <a
+            href="https://openreview.net/group?id=robot-learning.org/CoRL/2025/Workshop/RINO"><b>RINO OpenReview
+              console</b></a>.
+          <br><br>
+          <b>Best Paper and Best Poster Awards:</b> The workshop will recognize outstanding contributions with Best
+          Paper and Best Poster awards. Award amounts will be announced at a later date.<br><br>
+          Submissions will be reviewed in a double-blind process by workshop organizers and attendees.
+          <b>Each submission must nominate one reviewer to evaluate one other contribution</b>, following the CoRL main
+          track's reciprocal review model.
+          Accepted abstracts will be published on the workshop website and presented as posters. Selected works will be
+          invited for spotlight presentations.
+          <br><br>
+          We encourage submission of in-progress work and extensions of previously published material; originality is
+          welcome but not required.
+          However, <b>workshop paper versions of papers accepted to the CoRL 2025 main track are not permitted</b>. We
+          strongly encourage in-person participation of at least one author in the workshop.
+          The timezone for all deadlines is <a href="https://time.is/Anywhere_on_Earth"><b>Anywhere on Earth
+              (AoE)</b></a>.
+        </p>
+        <table class="calculator table-borderless" style="text-align:center; margin: 0 auto;">
+          <tr>
+            <td class="noborder">Paper Submission Opens</td>
+            <td class="noborder"><b>Aug 1 </b></td>
+          </tr>
+          <tr>
+            <td class="noborder">Paper Submission Deadline</td>
+            <td class="noborder"><b>Aug 21</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">Review Period</td>
+            <td class="noborder"><b>Aug 25 - Sep 5</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">Author Notification</td>
+            <td class="noborder"><b>Sep 8</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">Camera-ready Deadline</td>
+            <td class="noborder"><b>Sep 17</b></td>
+          </tr>
+        </table>
         <br><br><br><br>
-    </div>
+      </div>
 
 
-    <div class="section" id="speakers" style="text-align: center;  ">
-      <h2>Invited Speakers</h2>
-      <br>
-      <div class="grid profiles">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://web.stanford.edu/~bohg/" target="_blank"><img
-                src="imgs/speakers/jeannette_bohg.png" class="rounded-circle" alt="Jeannette Bohg" width="140"
-                height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://web.stanford.edu/~bohg/" target="_blank">Jeannette Bohg</a></h5>
-            Stanford University
-          </div>
+      <div class="section" id="speakers" style="text-align: center;">
+        <h2>Invited Speakers</h2>
+        <div class="container" style="max-width: 1140px;">
+          <div class="row align-items-start">
+            <div class="col-md-3 text-center mb-4">
+              <a href="https://web.stanford.edu/~bohg/" target="_blank">
+                <img src="imgs/speakers/jeannette_bohg.png" class="rounded-circle mb-2" alt="Jeannette Bohg" width="100"
+                  height="100">
+              </a><br>
+              <strong>
+                <a href="https://web.stanford.edu/~bohg/" target="_blank">Jeannette Bohg</a>
+              </strong><br>
+              <span style="font-size: 0.95em;">Stanford University</span>
+            </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://yunzhuli.github.io/" target="_blank"><img src="imgs/speakers/yunzhu_li.jpg"
-                class="rounded-circle" alt="Yunzhu Li" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://yunzhuli.github.io/" target="_blank">Yunzhu Li</a></h5>
-            Columbia University
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://siyuanhuang.com/" target="_blank"><img src="imgs/speakers/siyuan_huang.png"
-                class="rounded-circle" alt="Siyuan Huang" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a></h5>
-            Beijing Institute for General Artificial Intelligence (BIGAI)
+            <div class="col-md-9 text-left mb-4">
+              <p>
+                <strong>Short Bio:</strong> Jeannette Bohg is an Assistant Professor of Computer Science at Stanford
+                University. She was a group
+                leader at the Autonomous Motion Department (AMD) of the MPI for Intelligent Systems until September
+                2017. Before joining AMD in January 2012, Jeannette Bohg was a PhD student at the Division of Robotics,
+                Perception and Learning (RPL) at KTH in Stockholm. In her thesis, she proposed novel methods towards
+                multi-modal scene understanding for robotic grasping. She also studied at Chalmers in Gothenburg and at
+                the Technical University in Dresden where she received her Master in Art and Technology and her Diploma
+                in Computer Science, respectively. Her research focuses on perception and learning for autonomous
+                robotic manipulation and grasping. She is specifically interested in developing methods that are
+                goal-directed, real-time and multi-modal such that they can provide meaningful feedback for execution
+                and learning. Jeannette Bohg has received several Early Career and Best Paper awards, most notably the
+                2019 IEEE Robotics and Automation Society Early Career Award and the 2020 Robotics: Science and Systems
+                Early Career Award.
+                <br>
+                <strong>Talk Title:</strong> Fine sensorimotor skills for using tools, operating devices, assembling
+                parts, and manipulating non-rigid objects.
+              </p>
+
+            </div>
+            <hr style="width:100%;" />
+
+
+            <div class="col-md-3 text-center mb-4">
+              <a href="https://yunzhuli.github.io/" target="_blank">
+                <img src="imgs/speakers/yunzhu_li.jpg" class="rounded-circle mb-2" alt="Yunzhu Li" width="100"
+                  height="100">
+              </a><br>
+              <strong>
+                <a href="https://yunzhuli.github.io/" target="_blank">Yunzhu Li</a>
+              </strong><br>
+              <span style="font-size: 0.95em;">Columbia University</span>
+            </div>
+            <div class="col-md-9 text-left mb-4">
+              <p>
+                <strong>Short Bio:</strong> Yunzhu Li is an Assistant Professor of Computer Science at Columbia
+                University. Prior to joining Columbia, he was an Assistant Professor in the Department of Computer
+                Science at the University of Illinois Urbana-Champaign. He completed a postdoctoral fellowship at the
+                Stanford Vision and Learning Lab, working with Fei-Fei Li and Jiajun Wu. Li earned his PhD from the
+                Computer Science and Artificial Intelligence Laboratory (CSAIL) at MIT, advised by Antonio Torralba and
+                Russ Tedrake, and his bachelor’s degree from Peking University.
+                <br>
+                <strong>Talk Title: </strong> Learning structured world models from and for physical interactions.
+              </p>
+            </div>
+            <hr style="width:100%;" />
+
+
+            <div class="col-md-3 text-center mb-4">
+              <a href="https://siyuanhuang.com/" target="_blank">
+                <img src="imgs/speakers/siyuan_huang.png" class="rounded-circle mb-2" alt="Siyuan Huang" width="100"
+                  height="100">
+              </a><br>
+              <strong>
+                <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a>
+              </strong><br>
+              <span style="font-size: 0.95em;">Beijing Institute for General Artificial Intelligence (BIGAI)</span>
+            </div>
+            <div class="col-md-9 text-left mb-4">
+              <p>
+                <strong>Short Bio:</strong> Siyuan Huang is a Research Scientist at the Beijing Institute for General
+                Artificial Intelligence (BIGAI) and a lecturer at Peking University. He received his PhD in Statistics
+                from the University of California, Los Angeles, and his bachelor’s degree in Automation from Tsinghua
+                University. During his PhD, he interned at DeepMind and Facebook Reality Lab. His research interests
+                span computer vision, machine learning, cognition, and robotics, with a focus on developing
+                generalizable, language-grounded models for perception, interaction, learning, and planning in 3D
+                environments.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="section" id="schedule" style="align-content:center;">
-      <h2>Event Schedule (tentative)</h2>
-      <table class="calculator table-borderless" style="text-align:center; margin: 0 auto;">
-        <tr>
-          <td class="noborder">9:30 - 9:35</td>
-          <td class="noborder"><b>Introduction and Opening Remarks</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">9:35 - 10:00</td>
-          <td class="noborder"><b>Speaker 1</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">10:00 - 10:30</td>
-          <td class="noborder"><b>Spotlight Session 1 &amp; Poster Overview</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">10:30 - 11:00</td>
-          <td class="noborder"><b>Coffee Break &amp; Poster Sessions</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">11:00 - 11:25</td>
-          <td class="noborder"><b>Speaker 2</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">11:25 - 11:35</td>
-          <td class="noborder"><b>Spotlight Session 2</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">11:35 - 12:00</td>
-          <td class="noborder"><b>Speaker 3</b></td>
-        </tr>
-        <tr>
-          <td class="noborder">12:00 - 12:30</td>
-          <td class="noborder"><b>Panel Discussion &amp; Debate</b></td>
-        </tr>
-      </table>
-      <br><br><br><br>
-    </div>
+      <div class="section" id="schedule" style="align-content:center;">
+        <h2>Event Schedule (tentative)</h2>
+        <table class="calculator table-borderless" style="text-align:center; margin: 0 auto;">
+          <tr>
+            <td class="noborder">9:30 - 9:35</td>
+            <td class="noborder"><b>Introduction and Opening Remarks</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">9:35 - 10:00</td>
+            <td class="noborder"><b>Speaker 1</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">10:00 - 10:30</td>
+            <td class="noborder"><b>Spotlight Session 1 &amp; Poster Overview</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">10:30 - 11:00</td>
+            <td class="noborder"><b>Coffee Break &amp; Poster Sessions</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">11:00 - 11:25</td>
+            <td class="noborder"><b>Speaker 2</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">11:25 - 11:35</td>
+            <td class="noborder"><b>Spotlight Session 2</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">11:35 - 12:00</td>
+            <td class="noborder"><b>Speaker 3</b></td>
+          </tr>
+          <tr>
+            <td class="noborder">12:00 - 12:30</td>
+            <td class="noborder"><b>Panel Discussion &amp; Debate</b></td>
+          </tr>
+        </table>
+        <br><br><br><br>
+      </div>
 
-    <div class="section" id="organizers" style="text-align: center; padding: 10px;">
-      <h2>Organizers</h2>
-      <br>
-      <div class="grid profiles">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://hollydinkel.github.io/" target="_blank"><img src="imgs/organizers/holly_dinkel.jpg"
-                class="rounded-circle" alt="Holly Dinkel" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://hollydinkel.github.io/" target="_blank">Holly Dinkel</a></h5>
-            University of Illinois
-          </div>
+      <div class="section" id="organizers" style="text-align: center; padding: 10px;">
+        <h2>Organizers</h2>
+        <br>
+        <div class="grid profiles">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://hollydinkel.github.io/" target="_blank"><img src="imgs/organizers/holly_dinkel.jpg"
+                  class="rounded-circle" alt="Holly Dinkel" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://hollydinkel.github.io/" target="_blank">Holly Dinkel</a>
+              </h5>
+              University of Illinois
+            </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://buesma.github.io/" target="_blank"><img src="imgs/organizers/marcel_buesma.webp"
-                class="rounded-circle" alt="Marcel Büsching" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://buesma.github.io/" target="_blank">Marcel Büsching</a></h5>
-            KTH Royal Institute of Technology 
-          </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://buesma.github.io/" target="_blank"><img src="imgs/organizers/marcel_buesma.webp"
+                  class="rounded-circle" alt="Marcel Büsching" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://buesma.github.io/" target="_blank">Marcel Büsching</a>
+              </h5>
+              KTH Royal Institute of Technology
+            </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://jadchakra.github.io/" target="_blank"><img src="imgs/organizers/jad_abouchakra.jpg"
-                class="rounded-circle" alt="Jad Abou-Chakra" width="140" height="140"></a>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://jadchakra.github.io/" target="_blank"><img src="imgs/organizers/jad_abouchakra.jpg"
+                  class="rounded-circle" alt="Jad Abou-Chakra" width="140" height="140"></a>
               <h5 style="margin-bottom:0em;"><a href="https://jadchakra.github.io/" target="_blank">Jad Abou-Chakra</a>
               </h5>
               Queensland University of Technology
-          </div>  
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href=https://www.unibo.it/sitoweb/alessio.caporali/cv-en" target="_blank"><img src="imgs/organizers/alessio.png"
-                class="rounded-circle" alt="Alessio Caporali" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://www.unibo.it/sitoweb/alessio.caporali/cv-en" target="_blank">Alessio Caporali</a></h5>
-            University of Bologna
+            </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://www.bart-ai.com/" target="_blank"><img src="imgs/organizers/bardienus_duisterhof.png"
-                class="rounded-circle" alt="Bardienus Pieter Duisterhof" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://www.bart-ai.com/" target="_blank">Bardienus Pieter
-                Duisterhof</a></h5>
-            Carnegie Mellon University
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://albilo17.github.io/" target="_blank"><img src="imgs/organizers/alberta_longhini.png"
-                class="rounded-circle" alt="Alberta Longhini" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://albilo17.github.io/" target="_blank">Alberta Longhini</a>
-            </h5>
-            KTH Royal Institute of Technology
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://jenslundell.ai/" target="_blank"><img src="imgs/organizers/jens_lundell.jpg"
-                class="rounded-circle" alt="Jens Lundell" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://jenslundell.ai/" target="_blank">Jens Lundell</a>
-            </h5>
-            University of Turku
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://priyasundaresan.github.io/" target="_blank"><img src="imgs/organizers/priya_sundaresan.jpg"
-                class="rounded-circle" alt="Priya Sundaresan" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://priyasundaresan.github.io/" target="_blank">Priya Sundaresan</a></h5>
-            Stanford University
-          </div>
+          <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-            <a href="https://mingrui-yu.github.io/" target="_blank"><img src="imgs/organizers/mingrui_yu.jpg"
-                class="rounded-circle" alt="Mingrui Yu" width="140" height="140"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://mingrui-yu.github.io/" target="_blank">Mingrui Yu</a></h5>
-            Tsinghua University
+              <a href=https://www.unibo.it/sitoweb/alessio.caporali/cv-en" target="_blank"><img
+                  src="imgs/organizers/alessio.png" class="rounded-circle" alt="Alessio Caporali" width="140"
+                  height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://www.unibo.it/sitoweb/alessio.caporali/cv-en"
+                  target="_blank">Alessio Caporali</a></h5>
+              University of Bologna
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://www.bart-ai.com/" target="_blank"><img src="imgs/organizers/bardienus_duisterhof.png"
+                  class="rounded-circle" alt="Bardienus Pieter Duisterhof" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://www.bart-ai.com/" target="_blank">Bardienus Pieter
+                  Duisterhof</a></h5>
+              Carnegie Mellon University
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://albilo17.github.io/" target="_blank"><img src="imgs/organizers/alberta_longhini.png"
+                  class="rounded-circle" alt="Alberta Longhini" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://albilo17.github.io/" target="_blank">Alberta Longhini</a>
+              </h5>
+              KTH Royal Institute of Technology
+            </div>
           </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://jenslundell.ai/" target="_blank"><img src="imgs/organizers/jens_lundell.jpg"
+                  class="rounded-circle" alt="Jens Lundell" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://jenslundell.ai/" target="_blank">Jens Lundell</a>
+              </h5>
+              University of Turku
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://priyasundaresan.github.io/" target="_blank"><img
+                  src="imgs/organizers/priya_sundaresan.jpg" class="rounded-circle" alt="Priya Sundaresan" width="140"
+                  height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://priyasundaresan.github.io/" target="_blank">Priya
+                  Sundaresan</a></h5>
+              Stanford University
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://mingrui-yu.github.io/" target="_blank"><img src="imgs/organizers/mingrui_yu.jpg"
+                  class="rounded-circle" alt="Mingrui Yu" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://mingrui-yu.github.io/" target="_blank">Mingrui Yu</a></h5>
+              Tsinghua University
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
+              <a href="https://kywind.github.io/" target="_blank"><img src="imgs/organizers/kaifeng_zhang.jpeg"
+                  class="rounded-circle" alt="Kaifeng Zhang" width="140" height="140"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://kywind.github.io/" target="_blank">Kaifeng Zhang</a></h5>
+              Columbia University
+            </div>
+          </div>
+        </div>
 
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 profile" style="padding-bottom: 30px;">
-          <a href="https://kywind.github.io/" target="_blank"><img src="imgs/organizers/kaifeng_zhang.jpeg"
-              class="rounded-circle" alt="Kaifeng Zhang" width="140" height="140"></a>
-          <h5 style="margin-bottom:0em;"><a href="https://kywind.github.io/" target="_blank">Kaifeng Zhang</a></h5>
-          Columbia University
+
+      <div class="section" id="sponsors" style="text-align: center; padding: 30px 0;">
+        <h2>Sponsors</h2>
+        <div class="container" style="margin-top: 20px;">
+          <div class="row justify-content-center" style="gap: 40px;">
+            <div class="col-12 col-md-4">
+              <a href="https://www.merl.com/" target="_blank" rel="noopener">
+                <img src="imgs/sponsors/mitsubishi.svg" alt="Mitsubishi Sponsor" class="img-fluid"
+                  style="max-height:80px;">
+              </a>
+            </div>
+            <div class="col-12 col-md-4">
+              <a href="https://www.nokov.com/" target="_blank" rel="noopener">
+                <img src="imgs/sponsors/nokov.svg" alt="Nokov Sponsor" class="img-fluid" style="max-height:80px;">
+              </a>
+            </div>
+            <div class="col-12 col-md-4">
+              <a href="https://lightwheel.ai/home" target="_blank" rel="noopener">
+                <div style="background:#222; border-radius:16px; display:inline-block;">
+                  <img src="imgs/sponsors/lightweel.png" alt="Lightweel Sponsor" class="img-fluid"
+                    style="min-width:200px; max-width:300px">
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
+    <div class="foot">
+      <b>Contact:</b> For questions, please contact Marcel Büsching (<a
+        href="mailto:marcel.buesching@kth.se">marcel.buesching@kth.se</a>).
+      <br>
+      Website template from <a href="https://leap-workshop.github.io/">LEAP Workshop</a>.
     </div>
-  </div>
-  <div class="foot">
-    Website template from <a href="https://leap-workshop.github.io/">LEAP Workshop</a>.
-  </div>
 
   </div>
 
