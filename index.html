@@ -69,6 +69,21 @@
       border-top: 20px solid rgb(255, 255, 255);
       float: right;
     }
+
+      /* Make all links red */
+    a, a:visited {
+      color: #d60000; /* CoRL red */
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      color: #a30000;
+      text-decoration: underline;
+    }
+
+    .corl-red {
+      color: #d60000;
+      font-weight: bold;
+    }
   </style>
 
 </head>
@@ -102,20 +117,33 @@
     </div>
   </nav>
 
-  <div class="title-container">
-    <div style="text-align: center;">
-      <!-- <div class="subtitle" style="margin-bottom: 20px;"><a href="https://2025.ieee-icra.org/" target="_blank"><img src="imgs/ICRA-RGB.png" style="width:250px;"></a></div> -->
+<div class="title-container">
+  <div style="text-align: center;">
+    <!-- <div class="subtitle" style="margin-bottom: 20px;"><a href="https://2025.ieee-icra.org/" target="_blank"><img src="imgs/ICRA-RGB.png" style="width:250px;"></a></div> -->
 
+    <a href="https://www.corl.org/home" target="_blank">
+      <img src="imgs/assets/corl25.png" alt="Logo"
+        class="img-fluid mx-auto d-block"
+        style="max-width:300px; margin-bottom: 1em; margin-top: 1em;" />
+    </a>
 
-      <a href="https://www.corl.org/home" target="_blank"><img src="imgs/assets/corl25.png" alt="Logo"
-          class="img-fluid mx-auto d-block" style="max-width:300px; margin-bottom: 1em; margin-top: 1em;" /></a>
-      <h1 style="width:60%;margin:auto;">Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects
-        Workshop</h1>
-      <div class="subtitle" style="margin: 20px; margin-bottom: -10px;">
-        Seoul, Korea | September 27, 2025<br>
-      </div>
+    <h1 style="width:60%;margin:auto;">
+      Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects Workshop
+    </h1>
+
+    <div class="subtitle" style="margin: 20px; margin-bottom: -10px;">
+      Seoul, Korea | September 27, 2025<br>
+    </div>
+
+    <!-- New location block -->
+    <div class="subtitle" style="margin: 10px; font-size: 0.95em; line-height: 1.5;">
+      COEX Convention and Exhibition Center<br>
+      513 Yeongdong-daero, Gangnam District<br>
+      Floor 4F, Room 403<br>
+      9:30AM – 12:30PM
     </div>
   </div>
+</div>
 
   <div class="container" style="padding-bottom: 0px;">
     <div class="section" id="overview" style="align-content:center;">
@@ -159,11 +187,10 @@
         <h2>Call For Papers</h2>
         <p>
           We invite extended abstracts of up to 5 pages (excluding references, acknowledgments, limitations, and
-          appendix) formatted in the <a
-            href="https://drive.google.com/file/d/1XalwYG542cg2YAHo8STgZKxhAIA8_HSu/view?usp=sharing"><b>CoRL
-              template</b></a> and submitted via the <a
-            href="https://openreview.net/group?id=robot-learning.org/CoRL/2025/Workshop/RINO"><b>RINO OpenReview
-              console</b></a>.
+          appendix) formatted in the <a href="https://drive.google.com/file/d/1XalwYG542cg2YAHo8STgZKxhAIA8_HSu/view?usp=sharing">
+          <b><span class="corl-red">CoRL template</span></b></a> and submitted via the <a
+          href="https://openreview.net/group?id=robot-learning.org/CoRL/2025/Workshop/RINO"><b>RINO OpenReview
+          console</b></a>.
           <br><br>
           <b>Best Paper and Best Poster Awards:</b> The workshop will recognize outstanding contributions with Best
           Paper and Best Poster awards. Award amounts will be announced at a later date.<br><br>
